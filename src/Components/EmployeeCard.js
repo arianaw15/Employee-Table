@@ -5,7 +5,7 @@ import React,{useState, useEffect} from "react";
 function EmployeeCard() {
     const[employeeTable, setEmployeeTable] = useState([]);
     useEffect(()=>{
-        fetch('https://randomuser.me/api/?results=50')
+        fetch('https://randomuser.me/api/?results=20')
         .then(res => res.json())
         .then((data)=>setEmployeeTable(data.results)
                

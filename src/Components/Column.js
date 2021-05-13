@@ -1,20 +1,22 @@
-import React from 'react'
-import EmployeeCard from './EmployeeCard'
+import React from "react";
+import EmployeeCard from "./EmployeeCard";
 
 function Column() {
-    return (
-        <div>
-            <div className="card-columns">
-                <EmployeeCard />
-            </div>
-            <div className="card-columns">
-                <EmployeeCard />
-            </div>
-            <div className="card-columns">
-                <EmployeeCard />
-            </div>
+  return (
+    <div className="container">
+      <div className="row">
+        <div className="col-sm">
+          <EmployeeCard />
         </div>
-    )
+        <div className="col-sm">
+          <EmployeeCard />
+        </div>
+        <div className="col-sm">
+          <EmployeeCard />
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default Column
+export default Column;
