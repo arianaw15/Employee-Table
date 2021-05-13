@@ -22,8 +22,8 @@ function EmployeeCard() {
           {employee.name.first} {employee.name.last}
       </Card.Title>
       <Card.Text>
-        Email: {employee.email}
-        Phone Number: {employee.phone}
+        <p>Email: {employee.email}</p> 
+        <p>Phone Number: {employee.phone}</p> 
       </Card.Text>
     </Card.Body>
   </Card>
