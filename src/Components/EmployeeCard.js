@@ -1,34 +1,34 @@
-import {Card,Button} from 'react-bootstrap'
+import {Card} from 'react-bootstrap'
 import React,{useState, useEffect} from "react";
 
 
 function EmployeeCard() {
-    const[name, setName] = useState("");
-    const[img, setImg] = useState('');
+    const[employeeTable, setEmployeeTable] = useState([]);
     useEffect(()=>{
-        fetch('https://randomuser.me/api/')
+        fetch('https://randomuser.me/api/?results=50')
         .then(res => res.json())
-        .then(
-            (result)=>{
-                setName(result.results[0].name.first);
-                setImg(result.results[0].picture.large);
-                console.log(result)
-            },
+        .then((data)=>setEmployeeTable(data.results)
+               
         )
     },[])
+    console.log(employeeTable)
   return (
-    <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src={img} />
-  <Card.Body>
-    <Card.Title>
-        {name}
-    </Card.Title>
-    <Card.Text>
-      Email, Phone
-    </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
-  </Card.Body>
-</Card>
+    employeeTable.map((employee)=>{
+      return(
+<Card style={{ width: '18rem' }}>
+    <Card.Img variant="top" src={employee.picture.large} />
+    <Card.Body>
+      <Card.Title>
+          {employee.name.first} {employee.name.last}
+      </Card.Title>
+      <Card.Text>
+        Email: {employee.email}
+        Phone Number: {employee.phone}
+      </Card.Text>
+    </Card.Body>
+  </Card>
+   ) })
+    
   );
 }
 

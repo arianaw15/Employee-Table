@@ -3,7 +3,7 @@ import React from 'react'
 function Header() {
     return (
         <header>
-            Employee Directory
+            <h1>Employee Directory</h1>
         </header>
     )
 }
