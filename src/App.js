@@ -1,15 +1,15 @@
 import './App.css';
 import Header from './Components/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import EmployeeCard from './Components/EmployeeCard';
-import Column from './Components/Column';
+import Search from './Components/Search';
+// import Column from './Components/Column';
 
 function App() {
   
   return (
     <div >
       <Header />
-      <Column />
+      <Search />
     </div>
   );
 }

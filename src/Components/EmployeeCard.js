@@ -15,6 +15,7 @@ function EmployeeCard() {
   return (
     employeeTable.map((employee)=>{
       return(
+       
 <Card style={{ width: '18rem' }}>
     <Card.Img variant="top" src={employee.picture.large} />
     <Card.Body>
